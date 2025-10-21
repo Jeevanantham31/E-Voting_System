@@ -22,28 +22,28 @@ public class VotingProcess {
         candidateId = candidateId.trim();
 
         if (!voters.containsKey(voterId)) {
-            System.out.println("❌ Invalid Voter ID!");
+            System.out.println("Invalid Voter ID!");
             return;
         }
 
         Voter voter = voters.get(voterId);
         if (voter.hasVoted()) {
-            System.out.println("⚠️ You have already voted!");
+            System.out.println("You have already voted!");
             return;
         }
 
         if (!candidates.containsKey(candidateId)) {
-            System.out.println("❌ Invalid Candidate ID!");
+            System.out.println("Invalid Candidate ID!");
             return;
         }
 
         votes.put(candidateId, votes.get(candidateId) + 1);
         voter.setVoted(true);
-        System.out.println("🗳️ Vote recorded for " + candidates.get(candidateId).getName());
+        System.out.println("Vote recorded for " + candidates.get(candidateId).getName());
     }
 
     public void showResults() {
-        System.out.println("\n📊 Election Results:");
+        System.out.println("\nElection Results:");
         if (votes.isEmpty()) { System.out.println("No votes recorded."); return; }
 
         votes.entrySet().stream()
@@ -52,6 +52,7 @@ public class VotingProcess {
 
         votes.entrySet().stream()
                 .max(Map.Entry.comparingByValue())
-                .ifPresent(e -> System.out.println("\n🏆 Winner: " + candidates.get(e.getKey()).getName() + " (ID: " + e.getKey() + ") with " + e.getValue() + " votes"));
+                .ifPresent(e -> System.out.println("\n Winner: " + candidates.get(e.getKey()).getName() + " (ID: " + e.getKey() + ") with " + e.getValue() + " votes"));
     }
 }
+
