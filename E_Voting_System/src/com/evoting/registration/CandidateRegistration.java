@@ -23,13 +23,13 @@ public class CandidateRegistration {
         Candidate candidate = new Candidate(candidateId, name, dob, area);
         candidates.put(candidateId, candidate);
 
-        System.out.println("✅ Candidate Added: " + candidate);
+        System.out.println("Candidate Added: " + candidate);
         return candidateId;
     }
 
     // Show all candidates
     public void showCandidates() {
-        System.out.println("\n🧾 Candidates:");
+        System.out.println("\n Candidates:");
         if (candidates.isEmpty()) System.out.println("No candidates registered.");
         else candidates.values().forEach(System.out::println);
     }
@@ -46,3 +46,4 @@ public class CandidateRegistration {
         return Arrays.stream(parts).map(s -> s.substring(0, 1).toUpperCase()).reduce("", String::concat);
     }
 }
+
