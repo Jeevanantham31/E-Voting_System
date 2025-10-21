@@ -27,7 +27,7 @@ public class VoterRegistration {
         Voter voter = new Voter(voterId, name, dob);
         voters.put(voterId, voter);
 
-        System.out.println("✅ Voter Registered: " + voter);
+        System.out.println("Voter Registered: " + voter);
         return voterId;
     }
 
@@ -46,4 +46,5 @@ public class VoterRegistration {
         return Arrays.stream(parts).map(s -> s.substring(0, 1).toUpperCase()).reduce("", String::concat);
     }
 }
+
 
