@@ -7,16 +7,20 @@ The E-Voting System is a console-based Java application that simulates an electr
 Key Features
 ------------------
 --Candidate Registration:
+
     Add candidates with Name, DOB, and Area
     Generates unique Candidate ID in the format: AreaInitial-NameInitials-DOB-Count
 --Voter Registration:
+
     Register voters with Name and DOB (age ≥ 18)
     Generates unique Voter ID in the format: NameInitials-DOB-Count
 --Voting Process:
+
     Validates voter and candidate IDs
     Ensures each voter can vote only once
     Efficient vote recording using TreeMap
 --Result Display:
+
   Displays votes for each candidate
   Automatically declares the winner
 
