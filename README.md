@@ -8,8 +8,9 @@ Key Features
 ------------------
 --Candidate Registration:
 
- Add candidates with Name, DOB, and Area
- Generates unique Candidate ID in the format: AreaInitial-NameInitials-DOB-Count
+  Add candidates with Name, DOB, and Area
+ 
+  Generates unique Candidate ID in the format: AreaInitial-NameInitials-DOB-Count
  
 --Voter Registration:
    
