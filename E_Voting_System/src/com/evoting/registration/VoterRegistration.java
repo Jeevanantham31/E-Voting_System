@@ -12,7 +12,7 @@ public class VoterRegistration {
     // Register voter
     public String registerVoter(String name, LocalDate dob) {
         if (!isAdult(dob)) {
-            System.out.println("❌ Voter must be 18 or older!");
+            System.out.println(" Voter must be 18 or older!");
             return null;
         }
 
@@ -46,3 +46,4 @@ public class VoterRegistration {
         return Arrays.stream(parts).map(s -> s.substring(0, 1).toUpperCase()).reduce("", String::concat);
     }
 }
+
